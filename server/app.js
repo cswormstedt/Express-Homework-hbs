@@ -11,15 +11,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
+//will have the profile
 app.get('/home', function(req, res){
 	res.render('home', {})
 })
-
+//will login and direct to home
 app.get('/login', function(req, res){
 	res.render('login', {})
 })
-
+//will sign up keep data and redirect to login
 app.get('/register', function(req, res){
 	res.render('register', {})
 })
